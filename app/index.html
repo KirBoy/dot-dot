@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FTL: Прямая машина</title>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <section class="main">
+    <div class="container">
+      <h1 class="main__title">FTL: Прямая машина</h1>
+      <ul class="main__list">
+        <li class="main__item">
+          <h2 class="main__step">Маршрут</h2>
+          <p class="main__warning">
+            Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.
+          </p>
+          <label class="main__label">
+            <span class="main__desc">Откуда</span>
+            <input class="main__input" type="text">
+          </label>
+          <label class="main__label">
+            <span class="main__desc">Куда</span>
+            <input class="main__input" type="text">
+          </label>
+        </li>
+        <li class="main__item">
+
+          <h2 class="main__step main__step--2">Транспорт</h2>
+
+          <div class="main__inner">
+            <div class="main__left">
+              <span class="main__desc">Грузоподъёмность</span>
+              <span class="main__selection">Не выбрана</span>
+              <ul class="main__options" hidden>
+                <li class="main__choice">Вариант 1</li>
+                <li class="main__choice">Вариант 2</li>
+                <li class="main__choice">Вариант 3</li>
+              </ul>
+            </div>
+
+            <div class="main__right">
+              <span class="main__desc">Способ погрузки</span>
+              <span class="main__selection">Задняя</span>
+              <ul class="main__options" hidden>
+                <li class="main__choice">Вариант 1</li>
+                <li class="main__choice">Вариант 2</li>
+                <li class="main__choice">Вариант 3</li>
+              </ul>
+            </div>
+          </div>
+
+
+        </li>
+        <li class="main__item">
+          <h2 class="main__step main__step--3">Груз</h2>
+
+          <div class="main__type">
+            <span class="main__desc">Тип груза</span>
+            <span class="main__selection main__selection--big">Не выбран</span>
+            <ul class="main__options main__options--big" hidden>
+              <li class="main__choice">Вариант 1</li>
+              <li class="main__choice">Вариант 2</li>
+              <li class="main__choice">Вариант 3</li>
+            </ul>
+          </div>
+          <div class="main__inner">
+            <div class="main__left">
+              <span class="main__desc">Класс опасности</span>
+              <span class="main__selection">Не выбран</span>
+              <ul class="main__options main__options--position" hidden>
+                <li class="main__choice">Вариант 1</li>
+                <li class="main__choice">Вариант 2</li>
+                <li class="main__choice">Вариант 3</li>
+              </ul>
+            </div>
+
+            <div class="main__right">
+              <span class="main__desc">Объявленная ценность, ₽</span>
+              <span class="main__selection">Не выбрана</span>
+              <ul class="main__options  main__options--position" hidden>
+                <li class="main__choice">Вариант 1</li>
+                <li class="main__choice">Вариант 2</li>
+                <li class="main__choice">Вариант 3</li>
+              </ul>
+            </div>
+          </div>
+          <label class="main__box">
+            <input class="main__checkbox" type="checkbox">
+            <span class="main__desc main__desc--checkbox">Требуется температурный режим</span>
+          </label>
+          <div class="main__inner">
+            <div class="main__left">
+              <span class="main__desc">От, °C</span>
+             <input class="main__temperature" type='number'/>
+            </div>
+            <div class="main__right">
+              <span class="main__desc">До, °C</span>
+              <input class="main__temperature" type='number'/>
+            </div>
+        </li>
+        <li class="main__item">
+          <h2 class="main__step main__step--4">Время</h2>
+
+          <span class="main__desc">Когда прибыть на точку</span>
+          <span class="main__desc main__desc--position">700 км в день</span>
+
+          <label class="main__label-bottom  main__label-bottom--disabled">
+            <input class="main__address" type="text" placeholder="Адрес не указан">
+            <button class="main__btn disabled" disabled>не выбрано</button>
+            <input type="date" class="main__time">
+            <time class="main__date"></time>
+          </label>
+
+          <label class="main__label-bottom main__label-bottom--disabled">
+            <input class="main__address" type="text" placeholder="Адрес не указан">
+            <button class="main__btn disabled" disabled>не выбрано</button>
+            <input type="date" class="main__time">
+            <time class="main__date"></time>
+          </label>
+
+          <span class="main__desc">Комментарий к заказу</span>
+          <textarea class="main__text"
+            placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+      </ul>
+    </div>
+  </section>
+  <script src="js/main.min.js"></script>
+
+</body>
+
+</html>

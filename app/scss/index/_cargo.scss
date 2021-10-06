@@ -1,0 +1,24 @@
+.main__checkbox {
+  @extend %checkbox-hidden;
+
+  &:checked + .main__desc--checkbox {
+    &::after {
+      opacity: 1;
+    }
+
+    &::before {
+      background-color: #EF483E;
+      border-color: #EF483E;
+    }
+  }
+}
+
+.main__temperature {
+  display: block;
+  width: 165px;
+  height: 44px;
+  font-size: 15px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 14px;
+}
